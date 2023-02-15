@@ -1,10 +1,17 @@
 const newFolderName = function (folders) {
-if (folders == null) {
-return "New Folder"
+
+const length = folders.length + 1
+const folder = 'New Folder (' + length + ')'
+if (folders === null) {
+return 'New Folder'
+} else  { return folder }
+  //for (let i = 0; i < length; i++) {
+   // if (i === length) {
+      //return folders.length
+     // const folder = 'New Folder (' + (j + 1) + ')'
+      
 }
-  else  {
-  for (i = 0; i != folders.length; i++) {
-    if (i == folders.length) {
-      return "New Folder (" + (i + 1) + ")"
-}
-console.log(newFolderName())
+  //}
+  //}return folder
+//}
+console.log(newFolderName(['New Folder', 'New Folder (2)']))
