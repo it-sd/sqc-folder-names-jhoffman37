@@ -1,17 +1,13 @@
 const newFolderName = function (folders) {
-
-const length = folders.length + 1
-const folder = 'New Folder (' + length + ')'
-if (folders === null) {
-return 'New Folder'
-} else  { return folder }
-  //for (let i = 0; i < length; i++) {
-   // if (i === length) {
-      //return folders.length
-     // const folder = 'New Folder (' + (j + 1) + ')'
-      
+    const checks = 500
+    if (!folders.includes('New Folder')) {
+        return 'New Folder'
+    } else {
+        for (let i = 2; i < checks; i++) {
+            if (!folders.includes(`New Folder (${i})`)) {
+                return `New Folder (${i})`
+            }
+        }
+    }
 }
-  //}
-  //}return folder
-//}
-console.log(newFolderName(['New Folder', 'New Folder (2)']))
+module.exports = { newFolderName }
